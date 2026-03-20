@@ -1,12 +1,15 @@
 import random
 
 words = ["python","programa","variable","funcion","bucle","cadena","entero","lista"]
-word = random.choice(words)
+diccionario = {"uno":words,"dos":words,"tres":words}
 guessed = []
 attempts = 6
 score = 0
 print("¡Bienvenido al Ahorcado!")
 print()
+
+key = input("Elegir categoria: Uno, Dos o Tres")
+word = random.choice(diccionario.get(key))
 
 while attempts > 0:
     # Mostrar progreso: letras adivinadas y guiones para las que faltan
